@@ -7,11 +7,9 @@ import lombok.Setter;
 import java.util.List;
 @Getter
 @Setter
-@Entity(name="Users")
-public class User extends BaseModel{
+@Entity
+public class Movie extends BaseModel{
     private String name;
-    private String email;
-    private String password;
-    private String phone;
-    private List<Booking> bookings;
+    private String language;
+    private List<Feature> features;
 }
