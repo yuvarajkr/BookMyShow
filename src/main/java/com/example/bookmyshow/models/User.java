@@ -1,6 +1,7 @@
 package com.example.bookmyshow.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,5 +14,6 @@ public class User extends BaseModel{
     private String email;
     private String password;
     private String phone;
+    @OneToMany
     private List<Booking> bookings;
 }

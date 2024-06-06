@@ -11,16 +11,22 @@ import java.util.List;
 @Entity
 public class Booking extends BaseModel{
     private String bookingNumber;
-    @ManyToOne
-    private Show show;
-    @ManyToMany
-    private List<ShowSeat> showSeats;
+
     @ManyToOne
     private User user;
-    @Enumerated(EnumType.ORDINAL)
-    private ShowSeatStatus showSeatStatus;
+
+    @ManyToOne
+    private Show show;
+
+    @ManyToMany
+    private List<ShowSeat> showSeats;
+    private int amount;
+
     @OneToMany
     private List<Payment> payments;
-    
-    private int amount;
+
+
+    @Enumerated(EnumType.ORDINAL)
+    private BookingStatus bookingStatus;
+
 }

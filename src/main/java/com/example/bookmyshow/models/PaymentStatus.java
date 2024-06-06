@@ -1,7 +1,8 @@
 package com.example.bookmyshow.models;
 
 public enum PaymentStatus {
-    COMPLETE,
+    PENDING,
+    CONFIRMED,
     IN_PROGRESS,
-    FAILED
+    REFUNDED,
 }
